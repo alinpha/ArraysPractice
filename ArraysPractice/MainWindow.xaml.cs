@@ -47,7 +47,7 @@ namespace ArraysPractice
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            total = 0;
+            scores = new int[5];
             lstResults.Items.Clear();
             tbAvg.Text = "";
         }
