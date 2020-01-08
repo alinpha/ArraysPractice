@@ -1,0 +1,20 @@
+﻿<Window x:Class="ArraysPractice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArraysPractice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450.938" Width="306.682">
+    <Grid>
+        <Label Content="Touch Type Word Avarage(5 scores)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Margin="49,30,0,0"/>
+        <TextBox x:Name="txtScore" HorizontalAlignment="Left" Height="23" Margin="49,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="183,75,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Avg:" HorizontalAlignment="Left" Margin="49,119,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbAvg" HorizontalAlignment="Left" Margin="96,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="My results:" HorizontalAlignment="Left" Margin="55,161,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstResults" HorizontalAlignment="Left" Height="138" Margin="55,203,0,0" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="btnClear" Content="clear" HorizontalAlignment="Left" Margin="57,361,0,0" VerticalAlignment="Top" Width="201" Click="btnClear_Click"/>
+
+    </Grid>
+</Window>
