@@ -20,7 +20,7 @@ namespace ArraysPractice
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double total = 0;
+        private int[] scores = new int[5];
         public MainWindow()
         {
             InitializeComponent();
@@ -28,9 +28,21 @@ namespace ArraysPractice
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lstResults.Items.Add(txtScore.Text);
-            total += double.Parse(txtScore.Text);
+            int score = int.Parse(txtScore.Text);
+            scores[lstResults.Items.Count] = score;
+            lstResults.Items.Add(score);
+
+            int total = 0;
+
+            for (int i = 0; i < lstResults.Items.Count; i++)
+            {
+                total += scores[i];
+            }
+
             tbAvg.Text = $"{total / lstResults.Items.Count}";
+            txtScore.Text = "";
+            txtScore.SelectAll();
+            txtScore.Focus();
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
