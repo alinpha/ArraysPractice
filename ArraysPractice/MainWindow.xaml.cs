@@ -28,6 +28,13 @@ namespace ArraysPractice
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            if (lstResults.Items.Count == 5)
+            {
+                MessageBox.Show("max scores received. click cleare to calculate new avarage.");
+                return;
+            }
+
             int score = int.Parse(txtScore.Text);
             scores[lstResults.Items.Count] = score;
             lstResults.Items.Add(score);
